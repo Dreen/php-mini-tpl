@@ -32,6 +32,14 @@ class tpl
 	}
 	
 	/**
+	 * Add a replace symbol. The parameters are self-explanatory.
+	 */
+	function add ($name, $value='')
+	{
+		$this->symbols[$name] = $value;
+	}
+	
+	/**
 	 * Build the template file, apply known symbols, return result
 	 * @return The result
 	 */
