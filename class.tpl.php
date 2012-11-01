@@ -19,7 +19,7 @@ class tpl
 	/**
 	 * Path to template file
 	 */
-	private var $tplFile;
+	private $tplFile;
 	
 	/**
 	 * Constructor
@@ -27,7 +27,7 @@ class tpl
 	 */
 	function tpl ($tplName = 'main')
 	{
-		$this->tplFile = (substr($tplName, -4) == '.tpl') ? $tplFile : $this->tplDir . '/' . $tplFile . '.tpl';
+		$this->tplFile = (substr($tplName, -4) == '.tpl') ? $tplName : $this->tplDir . '/' . $tplName . '.tpl';
 		$this->symbols = array();
 	}
 	
