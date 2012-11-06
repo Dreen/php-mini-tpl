@@ -32,7 +32,7 @@ Example usage:
 	
 	if (isset($_GET['myday']))
 	{
-		$main->add('myday', $_GET['myday']);
+		$main->add('myday', htmlspecialchars($_GET['myday']));
 	}
 	else
 	{
