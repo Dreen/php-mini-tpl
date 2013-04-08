@@ -2,6 +2,7 @@
 /**
  * minimalistic template class. no fuss. no bells. no whistles.
  * tags: {tag}
+ * @url https://github.com/Dreen/php-mini-tpl
  * @author Grzegorz Balaga <dreen1@gmail.com>
  */
 class tpl
