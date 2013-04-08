@@ -33,11 +33,21 @@ class tpl
 	}
 	
 	/**
-	 * Add a replace symbol. The parameters are self-explanatory.
+	 * Add replace symbol(s).
 	 */
 	function add ($name, $value='')
 	{
-		$this->symbols[$name] = $value;
+		if (is_array($name))
+		{
+			foreach ($name as $subName => $value)
+			{
+				$this->add($subName, $value);
+			}
+		}
+		else
+		{
+			$this->symbols[$name] = $value;
+		}
 	}
 	
 	/**
