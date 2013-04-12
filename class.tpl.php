@@ -48,6 +48,8 @@ class tpl
 		{
 			$this->symbols[$name] = $value;
 		}
+		
+		return $this;
 	}
 	
 	/**
@@ -68,6 +70,11 @@ class tpl
 		
 		return $tpl;
 	}
+}
+
+function tpl($tplName)
+{
+	return new tpl($tplName);
 }
 
 ?>
