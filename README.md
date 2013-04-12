@@ -41,3 +41,12 @@ Example usage:
 	
 	echo $main->build();
 	
+Or the same, using chaining and an array argument
+
+	include 'class.tpl.php';
+	
+	echo tpl('test')->add(array(
+		'title' => 'Page Title',
+		'extra' => '<script src="jquery.js"></script>',
+		'myday' => (isset($_GET['myday'])) ? htmlspecialchars($_GET['myday']) : 'mysterious'
+	)->build();
