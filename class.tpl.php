@@ -29,6 +29,8 @@ class tpl
 	function tpl ($tplName = 'main')
 	{
 		$this->tplFile = (substr($tplName, -4) == '.tpl') ? $tplName : $this->tplDir . '/' . $tplName . '.tpl';
+		if (!file_exists($this->tplFile))
+			throw new Exception('Template "'.$this->tplFile.'" not found.');
 		$this->symbols = array();
 	}
 	
